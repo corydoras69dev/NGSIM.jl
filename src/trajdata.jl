@@ -53,7 +53,7 @@ type NGSIMTrajdata
         df = readtable(input_path, separator=' ', header = false)
         col_names = [:id, :frame, :n_frames_in_dataset, :epoch, :local_x, :local_y, :global_x, :global_y, :length, :width, :class, :speed, :acc, :lane, :carind_front, :carind_rear, :dist_headway, :time_headway]
         for (i,name) in enumerate(col_names)
-            rename!(df, symbol(@sprintf("x%d", i)), name)
+            rename!(df, Symbol(@sprintf("x%d", i)), name)
         end
 
         df[:global_heading] = fill(NaN, nrow(df))
