@@ -25,7 +25,8 @@ export
     filter_trajectory!,
     symmetric_exponential_moving_average!,
     load_ngsim_trajdata,
-    load_trajdata
+    load_trajdata,
+    convert_raw_ngsim_to_trajdatas
 
 
 include("roadway.jl")
