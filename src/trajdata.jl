@@ -40,6 +40,8 @@ end
 
 ###############
 
+using CSV
+
 type NGSIMTrajdata
     df         :: DataFrame
     car2start  :: Dict{Int, Int}         # maps carindex to starting index in the df
@@ -50,7 +52,8 @@ type NGSIMTrajdata
 
         @assert(isfile(input_path))
 
-        df = readtable(input_path, separator=' ', header = false)
+#        df = readtable(input_path, separator=' ', header = false)
+        df = CSV.read(input_path, separator=' ', header = false)
         col_names = [:id, :frame, :n_frames_in_dataset, :epoch, :local_x, :local_y, :global_x, :global_y, :length, :width, :class, :speed, :acc, :lane, :carind_front, :carind_rear, :dist_headway, :time_headway]
         for (i,name) in enumerate(col_names)
             rename!(df, Symbol(@sprintf("x%d", i)) => name)
