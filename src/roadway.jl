@@ -1,4 +1,4 @@
-const FLOATING_POINT_REGEX = r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?"
+﻿const FLOATING_POINT_REGEX = r"[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?"
 const METERS_PER_FOOT = 0.3048
 
 type NGSIMRoadway

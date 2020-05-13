@@ -1,4 +1,4 @@
-const NGSIM_TIMESTEP = 0.1 # [sec]
+﻿const NGSIM_TIMESTEP = 0.1 # [sec]
 const SMOOTHING_WIDTH_POS = 0.5 # [s]
 
 include(Pkg.dir("NGSIM", "src", "trajectory_smoothing.jl"))
